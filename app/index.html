@@ -1,14 +1,28 @@
  <!doctype html>
  <html>
  <head>
-     <meta charset="UTF-8">
-     <title>Document</title>
+	 <meta charset="UTF-8">
+	 <title>Document</title>
  </head>
  <body ng-app='app'>
-     <div class="headline">
-        <h1>{{myValue}}</h1>
-        <h2>{{2+2}}</h2>
-     </div>
-     <script type="text/javascript" src="bundle.js"></script>     
+	<div class="container" ng-controller="HomeController">
+		<table class="table table-bordered table-striped">
+		    <thead>
+		      <tr>
+		        <th>#</th>
+		        <th>Title</th>
+		        <th>Description</th>
+		      </tr>
+			</thead>
+	    	<tbody>
+			      <tr ng-repeat="movie in movies">
+			        <td>{{$index + 1}}</td>
+			        <td>{{movie.title}}</td>
+			        <td>{{movie.desc}}</td>
+			      </tr>
+			</tbody>
+		</table>
+	</div>
+	<script type="text/javascript" src="bundle.js"></script>     
  </body>
  </html>
