@@ -1,8 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import angular from 'angular';
-
-var ngModule = angular.module('app', []);
-
+import uirouter from 'angular-ui-router';
+import routing from './config';
 //import './style.css'
-import './ng-app-start.js'
-console.log(ngModule);
+
+//console.log(uirouter);
+var ngModule = 
+                angular
+                        .module('app', [uirouter])
+                        .config(routing);
