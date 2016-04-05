@@ -4,6 +4,6 @@ export default class HomeController {
   }
 
   changeName() {
-    this.name = 'Bartek';
+    this.name = 'You';
   }
 }
