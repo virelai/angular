@@ -1,3 +1,7 @@
 
 <h1>Github</h1>
 <h2>{{github.email}}</h2>
+
+<ul ng-controller="GitHubController">
+    <li ng-repeat="r in github.reposArray">{{r.name}}</li>
+</ul>
