@@ -1,7 +1,10 @@
+<div class="col-sm-12">
+    <h1>Github</h1>
+</div>
 
-<h1>Github</h1>
-<h2>{{github.email}}</h2>
+<user-input></user-input>
 
-<ul ng-controller="GitHubController">
-    <li ng-repeat="r in github.reposArray">{{r.name}}</li>
-</ul>
+<div ng-show="github.selectedUser">
+    <github-user></github-user>
+    <user-repos></user-repos>
+</div>
