@@ -1,28 +1,30 @@
- <!doctype html>
- <html>
- <head>
-	 <meta charset="UTF-8">
-	 <title>Document</title>
- </head>
- <body ng-app='app'>
-	<div class="container" ng-controller="HomeController">
-		<table class="table table-bordered table-striped">
-		    <thead>
-		      <tr>
-		        <th>#</th>
-		        <th>Title</th>
-		        <th>Description</th>
-		      </tr>
-			</thead>
-	    	<tbody>
-			      <tr ng-repeat="movie in movies">
-			        <td>{{$index + 1}}</td>
-			        <td>{{movie.title}}</td>
-			        <td>{{movie.desc}}</td>
-			      </tr>
-			</tbody>
-		</table>
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body ng-app="app">
+
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<ul class="navbar nav">
+			<li>
+				<a ui-sref="home">Home</a>
+			</li>
+			<li>
+				<a ui-sref="github">Github</a>
+			</li>
+		</ul>
 	</div>
-	<script type="text/javascript" src="bundle.js"></script>     
- </body>
- </html>
+</nav>
+  	
+
+
+    <div class="container">
+        <ui-view></ui-view>
+    </div>
+    <script type="text/javascript" src="bundle.js"></script>
+</body>
+</html>

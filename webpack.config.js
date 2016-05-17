@@ -1,3 +1,4 @@
+
 module.exports = {
 	context: __dirname + '/app',
 	entry: './index.js',
