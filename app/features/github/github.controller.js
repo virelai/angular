@@ -1,6 +1,8 @@
 export default class GitHubController {
-  constructor(GitHubService, $stateParams) {
+  constructor(GitHubService, $stateParams, $firebaseArray) {
     
+    let ref = new Firebase("https://justyna.firebaseio.com/items");
+    this.items = $firebaseArray(ref);
     this.selectedUser = $stateParams.user
     
     GitHubService.getUser(this.selectedUser)

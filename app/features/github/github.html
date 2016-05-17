@@ -8,3 +8,14 @@
     <github-user></github-user>
     <user-repos></user-repos>
 </div>
+
+
+
+<div class="col-md-4">
+    <table class="table">
+        <tr ng-repeat="item in github.items">
+            <td>{{item.name}}</td>
+            <td>{{item.text}}</td>
+        </tr>
+    </table>
+</div>
